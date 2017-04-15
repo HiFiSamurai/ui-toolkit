@@ -1,0 +1,56 @@
+@import './helpers';
+
+.toggle {
+    cursor: pointer;
+    display: inline-block;
+
+    input {
+        display: none;
+
+        + span {
+            display: inline-block;
+            vertical-align: middle;
+            width: 48px;
+            height: 24px;
+            border-radius: 16px;
+            border: 1px solid $controlColor;
+            user-select: none;
+            background-image: linear-gradient(to left, $controlColor 50%, #F9F9F9 50%);
+            background-size: 200% 100%;
+            background-position-x: -25%;
+            transition: background-position-x $transitionNormal;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 22px;
+                height: 22px;
+                margin-left: -1px;
+                border-radius: 50%;
+                border: 1px solid $controlColor;
+                background-color: #FFF;
+                transition: margin-left $transitionNormal;
+            }
+        }
+
+        &:checked + span {
+            background-position-x: -75%;
+
+            &:before {
+                margin-left: 25px;
+            }
+        }
+
+        &:disabled + span {
+            cursor: not-allowed;
+            border-color: #999;
+            background-color: #EFEFEF;
+            background-image: none;
+
+            &::before {
+                border-color: #999;
+                background-color: #F9F9F9;
+            }
+        }
+    }
+}

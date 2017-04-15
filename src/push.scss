@@ -1,0 +1,40 @@
+@import './helpers';
+
+.push-group {
+    display: inline-block;
+    vertical-align: bottom;
+    padding: 0;
+
+    li {
+        $pushDistance: 3px;
+        display: inline;
+
+        input {
+            display: none;
+
+            &:checked + label {
+                box-shadow: 0 0 $controlColor;
+                top: $pushDistance;
+                left: $pushDistance;
+                cursor: default;
+            }
+        }
+
+        label {
+            margin: 0;
+            padding: 5px;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            position: relative;
+            font-size: 16px;
+            border: 1px solid $controlColor;
+            background: #FFF;
+            box-shadow: $pushDistance $pushDistance lighten($controlColor, 40%);
+            text-align: center;
+            cursor: pointer;
+            transition: box-shadow $transitionSubtle, left $transitionSubtle, top $transitionSubtle;
+            user-select: none;
+        }
+    }
+}

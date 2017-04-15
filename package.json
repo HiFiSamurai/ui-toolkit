@@ -1,0 +1,14 @@
+{
+  "name": "ui-toolkit",
+  "version": "1.0.0",
+  "description": "Library of reusable components, styles, and variables",
+  "author": "Maynard Russell <maynard.russell@gmail.com> (https://github.com/HiFiSamurai)",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HiFiSamurai/ui-toolkit.git"
+  }
+}

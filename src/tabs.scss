@@ -1,0 +1,41 @@
+@import './helpers';
+
+.tab-group {
+    padding: 0;
+    margin: 0;
+
+    .tab {
+        display: inline-block;
+
+        + .tab {
+            margin-left: 20px;
+        }
+
+        input {
+            display: none;
+
+            &:checked + label {
+                color: #FFF;
+                background-position-y: top;
+                cursor: default;
+                font-weight: bold;
+            }
+        }
+
+        label {
+            $colorPreview: 3px;
+            display: inline-block;
+            width: 90px;
+            padding: (10px + $colorPreview) 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-transform: uppercase;
+            transition: color $transitionNormal, background-position $transitionNormal;
+            background-image: linear-gradient(to bottom, $controlColor 50%, transparent 50%);
+            background-size: 100% 200%;
+            background-position: left calc(100% + #{$colorPreview});
+            user-select: none;
+        }
+    }
+}
