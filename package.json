@@ -4,11 +4,26 @@
   "description": "Library of reusable components, styles, and variables",
   "author": "Maynard Russell <maynard.russell@gmail.com> (https://github.com/HiFiSamurai)",
   "license": "MIT",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HiFiSamurai/ui-toolkit.git"
+  },
+  "scripts": {
+    "clean": "del ./dist",
+    "build": "npm run clean && npm run build-js && npm run build-sass && npm run build-css && npm run autoprefixer",
+    "build-js": "copyfiles ./src/js/*.js ./dist/js/ -f",
+    "build-sass": "copyfiles ./src/sass/*.scss ./dist/sass/ -f",
+    "build-css": "node-sass ./src/sass --output=./dist/css --output-style=compressed",
+    "autoprefixer": "postcss ./dist/css/*.css --use autoprefixer -d ./dist/css/",
+    "install": "npm run build"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.7.5",
+    "copyfiles": "^1.2.0",
+    "del-cli": "^0.2.1",
+    "node-sass": "^3.7.0",
+    "postcss-cli": "^3.2.0",
+    "uglify-js": "^2.6.2",
+    "webcomponents.js": "^0.7.22"
   }
 }
