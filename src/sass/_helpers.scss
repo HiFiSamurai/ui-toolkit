@@ -4,7 +4,11 @@ $transitionLong: 600ms;
 
 $controlColor: #17B;
 
-@mixin delayed-list($initial: $transitionSubtle, $offset: $transitionSubtle) {
+$screenTablet: 768px;
+$screenDesktop: 1024px;
+$screenDesktopLg: 1200px;
+
+@mixin delayed-list($initial: $transitionNormal, $offset: $transitionSubtle) {
     $max: 10;
     @for $i from 1 through $max {
         &:nth-child(#{$i}) {
