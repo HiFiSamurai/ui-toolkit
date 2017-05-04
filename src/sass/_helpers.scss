@@ -1,12 +1,42 @@
+$controlColor: #6D3258;
+
+$borderRadius: 3px;
+
+// Spacings
+$smallSpacing: 5px;
+$mediumSpacing: 15px;
+$largeSpacing: 30px;
+$xlargeSpacing: 60px;
+
+$spacing: (
+	small: $smallSpacing,
+	medium: $mediumSpacing,
+	large: $largeSpacing,
+	xlarge: $xlargeSpacing
+);
+
+// Transition Timing
 $transitionNormal: 300ms;
 $transitionSubtle: 100ms;
 $transitionLong: 600ms;
 
-$controlColor: #17B;
 
+// Media Breakpoints
 $screenTablet: 768px;
 $screenDesktop: 1024px;
 $screenDesktopLg: 1200px;
+
+$mediaTablet: "only screen and (max-width : "+$screenTablet+")";
+$mediaDesktop: "only screen and (max-width : "+$screenDesktop+")";
+$mediaDesktopLg: "only screen and (max-width : "+$screenDesktopLg+")";
+
+
+// Z-Index Levels
+$chromeZIndex: 1000;
+$menuZIndex: 2000;
+$dialogZIndex: 3000;
+
+//Mixins
 
 @mixin delayed-list($initial: $transitionNormal, $offset: $transitionSubtle) {
     $max: 10;
@@ -18,4 +48,11 @@ $screenDesktopLg: 1200px;
     &:nth-child(n+#{$max}) {
         animation-duration: $initial + ($offset * ($max - 1));
     }
+}
+
+@mixin center() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
