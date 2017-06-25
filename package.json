@@ -10,12 +10,14 @@
   },
   "scripts": {
     "clean": "del ./dist",
-    "build": "npm run clean && npm run build-js && npm run build-sass && npm run build-css && npm run autoprefixer",
+    "build": "npm run clean && npm run build-js && npm run build-sass && npm run build-css && npm run build-templates",
     "build-js": "copyfiles ./src/js/*.js ./dist/js/ -f",
     "build-sass": "copyfiles ./src/sass/*.scss ./dist/sass/ -f",
-    "build-css": "node-sass ./src/sass --output=./dist/css --output-style=compressed",
+    "build-css": "node-sass ./src/sass --output=./dist/css --output-style=compressed && npm run autoprefixer",
+    "build-templates": "copyfiles ./src/plop/* ./dist/plop/ -f",
     "autoprefixer": "postcss ./dist/css/*.css --use autoprefixer -d ./dist/css/",
-    "install": "npm run build"
+    "install": "npm run build",
+    "plop": "plop --plopfile ./src/plop/config.js"
   },
   "dependencies": {
     "autoprefixer": "^6.7.5",
@@ -25,5 +27,8 @@
     "postcss-cli": "^3.2.0",
     "uglify-js": "^2.6.2",
     "webcomponents.js": "^0.7.22"
+  },
+  "devDependencies": {
+    "plop": "^1.8.0"
   }
 }
