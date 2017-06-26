@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "Library of reusable components, styles, and variables",
   "author": "Maynard Russell <maynard.russell@gmail.com> (https://github.com/HiFiSamurai)",
-  "license": "MIT",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HiFiSamurai/ui-toolkit.git"
   },
+  "bugs": {
+    "url": "https://github.com/HiFiSamurai/lexicography/issues"
+  },
+  "homepage": "https://hifisamurai.github.io/lexicography/",
   "scripts": {
     "clean": "del ./dist",
     "build": "npm run clean && npm run build-js && npm run build-sass && npm run build-css && npm run build-templates",
