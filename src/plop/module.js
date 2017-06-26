@@ -1,6 +1,9 @@
 'use strict';
 
-import { createTemplate } from 'ui-toolkit/dist/js/views';
+import {
+    createTemplate,
+    createView
+} from 'ui-toolkit/dist/js/views';
 
 import './{{camelCase name}}.scss';
 import html from './{{camelCase name}}.html';
@@ -12,4 +15,4 @@ class {{pascalCase name}} extends HTMLElement {
     }
 }
 
-export default document.registerElement('{{lowerCase app}}-{{lowerCase name}}', {{pascalCase name}});
+export default createView(('{{lowerCase app}}-{{lowerCase name}}', {{pascalCase name}});
