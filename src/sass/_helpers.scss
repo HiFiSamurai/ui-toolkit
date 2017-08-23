@@ -9,17 +9,16 @@ $largeSpacing: 30px;
 $xlargeSpacing: 60px;
 
 $spacing: (
-	small: $smallSpacing,
-	medium: $mediumSpacing,
-	large: $largeSpacing,
-	xlarge: $xlargeSpacing
+    small: $smallSpacing,
+    medium: $mediumSpacing,
+    large: $largeSpacing,
+    xlarge: $xlargeSpacing
 );
 
 // Transition Timing
 $transitionNormal: 300ms;
 $transitionSubtle: 100ms;
 $transitionLong: 600ms;
-
 
 // Media Breakpoints
 $screenTablet: 768px;
@@ -30,7 +29,6 @@ $mediaTablet: "only screen and (max-width : "+$screenTablet+")";
 $mediaDesktop: "only screen and (max-width : "+$screenDesktop+")";
 $mediaDesktopLg: "only screen and (max-width : "+$screenDesktopLg+")";
 
-
 // Z-Index Levels
 $chromeZIndex: 1000;
 $menuZIndex: 2000;
@@ -40,19 +38,21 @@ $dialogZIndex: 3000;
 
 @mixin delayed-list($initial: $transitionNormal, $offset: $transitionSubtle) {
     $max: 10;
+
     @for $i from 1 through $max {
         &:nth-child(#{$i}) {
             animation-duration: $initial + ($offset * ($i - 1));
         }
     }
+
     &:nth-child(n+#{$max}) {
         animation-duration: $initial + ($offset * ($max - 1));
     }
 }
 
 @mixin center() {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

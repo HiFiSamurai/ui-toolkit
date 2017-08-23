@@ -2,21 +2,21 @@
 
 // Margin and padding shorthands
 @each $key in map-keys($spacing) {
-	$val: map-get($spacing, $key);
-	.m-#{$key}    { margin: #{$val}; }
-	.m-#{$key}-t  { margin-top: #{$val}; }
-	.m-#{$key}-r  { margin-right: #{$val}; }
-	.m-#{$key}-b  { margin-bottom: #{$val}; }
-	.m-#{$key}-l  { margin-left: #{$val} }
+    $val: map-get($spacing, $key);
+    .m-#{$key} { margin: #{$val}; }
+    .m-#{$key}-t { margin-top: #{$val}; }
+    .m-#{$key}-r { margin-right: #{$val}; }
+    .m-#{$key}-b { margin-bottom: #{$val}; }
+    .m-#{$key}-l { margin-left: #{$val}; }
 
-	.p-#{$key}    { padding: #{$val}; }
-	.p-#{$key}-t  { padding-top: #{$val}; }
-	.p-#{$key}-r  { padding-right: #{$val}; }
-	.p-#{$key}-b  { padding-bottom: #{$val}; }
-	.p-#{$key}-l  { padding-left: #{$val}; }
+    .p-#{$key} { padding: #{$val}; }
+    .p-#{$key}-t { padding-top: #{$val}; }
+    .p-#{$key}-r { padding-right: #{$val}; }
+    .p-#{$key}-b { padding-bottom: #{$val}; }
+    .p-#{$key}-l { padding-left: #{$val}; }
 }
 
 // Delayed list loading effect
 .delayed-list {
-	@include delayed-list();
+    @include delayed-list();
 }

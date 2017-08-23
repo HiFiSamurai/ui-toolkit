@@ -36,7 +36,7 @@
         &:checked + span {
             background-position-x: -75%;
 
-            &:before {
+            &::before {
                 margin-left: 25px;
             }
         }
