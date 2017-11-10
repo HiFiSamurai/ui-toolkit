@@ -9,7 +9,6 @@
 	"eqeqeq": true,
 	"esversion": 6,
 	"forin": false,
-	"jquery": true,
 	"latedef": true,
 	"loopfunc": false,
 	"maxdepth": 3,

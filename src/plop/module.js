@@ -13,6 +13,6 @@ class {{pascalCase name}} extends HTMLElement {
         const content = createTemplate(html);
         this.appendChild(content);
     }
-}
+};
 
 export default createView(('{{lowerCase app}}-{{lowerCase name}}', {{pascalCase name}});

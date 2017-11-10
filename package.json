@@ -21,8 +21,12 @@
     "build-templates": "copyfiles ./src/plop/* ./dist/plop/ -f",
     "autoprefixer": "postcss ./dist/css/*.css --use autoprefixer -d ./dist/css/",
     "install": "npm run build",
+    "lint": "jshint src/js/*.js",
     "plop": "plop --plopfile ./src/plop/config.js"
   },
+  "browserslist": [
+    "last 2 versions"
+  ],
   "dependencies": {
     "autoprefixer": "^6.7.5",
     "copyfiles": "^1.2.0",
@@ -33,6 +37,7 @@
     "webcomponents.js": "^0.7.22"
   },
   "devDependencies": {
+    "jshint": "^2.9.4",
     "plop": "^1.8.0"
   }
 }
