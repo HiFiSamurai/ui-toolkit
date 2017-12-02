@@ -1,0 +1,18 @@
+'use strict';
+
+import 'webcomponents.js/webcomponents-lite';
+
+class View extends HTMLElement {
+    static wrapped() {
+        const cls = document.registerElement(this.name, this);
+        return (params) => Object.assign(new cls(), params);
+    }
+
+    createdCallback() {
+        const template = new DOMParser().parseFromString(this.constructor.html, 'text/html');
+        const content = template.head.firstChild.content;
+        this.appendChild(content);
+    }
+}
+
+export default View;
