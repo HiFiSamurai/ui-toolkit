@@ -20,3 +20,22 @@
 .delayed-list {
     @include delayed-list();
 }
+
+.rounded { border-radius: $borderRadius; }
+.shadowed { @include shadowed(); }
+
+.db { display: block; }
+.dib { display: inline-block; }
+.dn { display: none; }
+
+.hidden { visibility: hidden; }
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
