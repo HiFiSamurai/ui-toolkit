@@ -10,7 +10,7 @@ class View extends HTMLElement {
 
     createdCallback() {
         const template = new DOMParser().parseFromString(this.constructor.html, 'text/html');
-        const content = template.head.firstChild.content;
+        const content = document.importNode(template.head.firstChild.content, true);
         this.appendChild(content);
     }
 }
