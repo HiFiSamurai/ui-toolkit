@@ -1,18 +1,13 @@
 'use strict';
 
-import {
-    createTemplate,
-    createView
-} from 'ui-toolkit/dist/js/views';
+import View from 'ui-toolkit/dist/js/View';
 
 import './{{camelCase name}}.scss';
 import html from './{{camelCase name}}.html';
 
-class {{pascalCase name}} extends HTMLElement {
-    attachedCallback() {
-        const content = createTemplate(html);
-        this.appendChild(content);
-    }
-};
+class {{pascalCase name}} extends View {
+    static get name() { return '{{lowerCase app}}-{{lowerCase name}}'; }
+    static get html() { return html; }
+}
 
-export default createView(('{{lowerCase app}}-{{lowerCase name}}', {{pascalCase name}});
+export default {{pascalCase name}}.wrapped();
