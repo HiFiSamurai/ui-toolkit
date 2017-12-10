@@ -1,5 +1,3 @@
-'use strict';
-
 const memoized = new WeakMap();
 
 function memoizationFor(obj) {

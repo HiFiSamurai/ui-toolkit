@@ -21,7 +21,7 @@
     "build-templates": "copyfiles ./src/plop/* ./dist/plop/ -f",
     "autoprefixer": "postcss ./dist/css/*.css --use autoprefixer -d ./dist/css/",
     "install": "npm run build",
-    "lint": "jshint src/js/",
+    "lint": "eslint src/js/",
     "plop": "plop --plopfile ./src/plop/config.js"
   },
   "browserslist": [
@@ -37,7 +37,12 @@
     "webcomponents.js": "^0.7.22"
   },
   "devDependencies": {
-    "jshint": "^2.9.4",
+    "eslint": "^4.13.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
     "plop": "^1.8.0"
   }
 }

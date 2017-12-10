@@ -1,5 +1,3 @@
-'use strict';
-
 import View from 'ui-toolkit/dist/js/View';
 
 import './{{camelCase name}}.scss';

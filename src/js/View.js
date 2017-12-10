@@ -1,5 +1,3 @@
-'use strict';
-
 import 'webcomponents.js/webcomponents-lite';
 
 class View extends HTMLElement {
