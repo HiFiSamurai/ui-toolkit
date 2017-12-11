@@ -7,10 +7,6 @@
     .tab {
         display: inline-block;
 
-        + .tab {
-            margin-left: 20px;
-        }
-
         input {
             display: none;
 
@@ -31,7 +27,6 @@
             font-size: 16px;
             cursor: pointer;
             text-align: center;
-            text-transform: uppercase;
             transition: color $transitionNormal, background-position $transitionNormal;
             background-image: linear-gradient(to bottom, $controlColor 50%, transparent 50%);
             background-size: 100% 200%;
