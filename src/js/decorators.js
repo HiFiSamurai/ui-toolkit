@@ -10,11 +10,14 @@ function memoizationFor(obj) {
 }
 
 export function memoize(target, name, descriptor) {
-    const getter = descriptor.get, setter = descriptor.set;
+    const getter = descriptor.get;
+    const setter = descriptor.set;
     descriptor.get = function() {
         const table = memoizationFor(this);
-        if (name in table) { return table[name]; }
-        return table[name] = getter.call(this);
+        if (!(name in table)) {
+            table[name] = getter.call(this);
+        }
+        return table[name];
     };
 
     descriptor.set = function(val) {
@@ -24,7 +27,7 @@ export function memoize(target, name, descriptor) {
     };
 }
 
-export function debounce(target, name, descriptor, time=0) {
+export function debounce(target, name, descriptor, time = 0) {
     const value = descriptor.value;
     descriptor.value = function() {
         setTimeout(() => {

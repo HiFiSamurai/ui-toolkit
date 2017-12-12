@@ -22,6 +22,7 @@
     "autoprefixer": "postcss ./dist/css/*.css --use autoprefixer -d ./dist/css/",
     "install": "npm run build",
     "lint": "eslint src/js/",
+    "stylelint": "stylelint src/sass",
     "plop": "plop --plopfile ./src/plop/config.js"
   },
   "browserslist": [
@@ -29,18 +30,20 @@
   ],
   "dependencies": {
     "autoprefixer": "^6.7.5",
+    "babel-eslint": "^8.0.3",
     "copyfiles": "^1.2.0",
     "del-cli": "^0.2.1",
-    "node-sass": "^3.7.0",
-    "postcss-cli": "^3.2.0",
-    "uglify-js": "^2.6.2",
-    "webcomponents.js": "^0.7.22",
     "eslint": "^4.13.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "plop": "^1.8.0"
+    "node-sass": "^3.7.0",
+    "plop": "^1.8.0",
+    "postcss-cli": "^3.2.0",
+    "stylelint": "^8.3.1",
+    "uglify-js": "^2.6.2",
+    "webcomponents.js": "^0.7.22"
   }
 }
