@@ -55,6 +55,10 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@webcomponents/webcomponentsjs@^1.0.20":
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-1.0.20.tgz#bac97c9709a3130241da4c2c85710e1dc8775b1c"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -3705,10 +3709,6 @@ vfile@^2.0.0:
     replace-ext "1.0.0"
     unist-util-stringify-position "^1.0.0"
     vfile-message "^1.0.0"
-
-webcomponents.js@^0.7.22:
-  version "0.7.24"
-  resolved "https://registry.yarnpkg.com/webcomponents.js/-/webcomponents.js-0.7.24.tgz#2116fbfa1468ec416a7befdaa333e1d118f69c04"
 
 which-module@^1.0.0:
   version "1.0.0"
