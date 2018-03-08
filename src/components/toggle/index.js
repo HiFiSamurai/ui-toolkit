@@ -1,4 +1,4 @@
-import View from '../js/View';
+import View from '../../js/View';
 
 import './toggle.scss';
 import html from './toggle.html';
