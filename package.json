@@ -9,15 +9,15 @@
     "url": "git+https://github.com/HiFiSamurai/ui-toolkit.git"
   },
   "bugs": {
-    "url": "https://github.com/HiFiSamurai/lexicography/issues"
+    "url": "https://github.com/HiFiSamurai/ui-toolkit/issues"
   },
-  "homepage": "https://hifisamurai.github.io/lexicography/",
   "scripts": {
     "clean": "del ./dist",
-    "build": "npm run clean && npm run build-js && npm run build-sass && npm run build-css && npm run build-templates",
+    "build": "npm run clean && npm run build-js && npm run build-sass && npm run build-css && npm run build-templates && npm run build-components",
     "build-js": "copyfiles ./src/js/*.js ./dist/js/ -f",
     "build-sass": "copyfiles ./src/sass/*.scss ./dist/sass/ -f",
     "build-css": "node-sass ./src/sass --output=./dist/css --output-style=compressed && npm run autoprefixer",
+    "build-components": "copyfiles ./src/components/**/* ./dist/components/ -u 2",
     "build-templates": "copyfiles ./src/plop/* ./dist/plop/ -f",
     "autoprefixer": "postcss ./dist/css/*.css --use autoprefixer -d ./dist/css/",
     "install": "npm run build",
@@ -29,6 +29,7 @@
     "last 2 versions"
   ],
   "dependencies": {
+    "@webcomponents/webcomponentsjs": "webcomponents/webcomponentsjs",
     "autoprefixer": "^6.7.5",
     "babel-eslint": "^8.0.3",
     "copyfiles": "^1.2.0",
@@ -43,7 +44,6 @@
     "plop": "^1.8.0",
     "postcss-cli": "^3.2.0",
     "stylelint": "^8.3.1",
-    "uglify-js": "^2.6.2",
-    "@webcomponents/webcomponentsjs": "^1.0.20"
+    "uglify-js": "^2.6.2"
   }
 }

@@ -1,4 +1,4 @@
-import View from 'ui-toolkit/dist/js/View';
+import View from '@HiFiSamurai/ui-toolkit/dist/js/view';
 
 import './{{camelCase name}}.scss';
 import html from './{{camelCase name}}.html';

@@ -1,4 +1,4 @@
-import 'webcomponents.js/webcomponents-lite';
+import '@webcomponents/webcomponentsjs';
 
 class View extends HTMLElement {
     static wrapped() {
@@ -7,11 +7,13 @@ class View extends HTMLElement {
     }
 
     createdCallback() {
-        if (this.constructor.html) {
-            const template = new DOMParser().parseFromString(this.constructor.html, 'text/html');
-            const content = document.importNode(template.head.firstChild.content, true);
-            this.appendChild(content);
+        if (!this.constructor.html) {
+            return;
         }
+
+        const template = new DOMParser().parseFromString(this.constructor.html, 'text/html');
+        const content = document.importNode(template.head.firstChild.content, true);
+        this.appendChild(content);
     }
 }
 
