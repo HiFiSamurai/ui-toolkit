@@ -2,11 +2,13 @@ import '@webcomponents/webcomponentsjs';
 
 class View extends HTMLElement {
     static wrapped() {
-        const Cls = document.registerElement(this.name, this);
-        return (params) => Object.assign(new Cls(), params);
+        customElements.define(this.name, this);
+        return (params) => Object.assign(new this(), params);
     }
 
-    createdCallback() {
+    constructor() {
+        super();
+
         if (!this.constructor.html) {
             return;
         }
