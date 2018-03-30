@@ -1,9 +1,13 @@
-import decorators from './decorators';
 import Model from './Model';
 import View from './View';
+import {
+    debounce,
+    memoize,
+} from './decorators';
 
 export {
-    decorators,
     Model,
     View,
+    debounce,
+    memoize,
 };
