@@ -4,6 +4,7 @@
   "description": "Library of reusable components, styles, and variables",
   "author": "Maynard Russell <maynard.russell@gmail.com> (https://github.com/HiFiSamurai)",
   "license": "ISC",
+  "main": "dist/js/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HiFiSamurai/ui-toolkit.git"
@@ -25,9 +26,6 @@
     "stylelint": "stylelint src/sass",
     "plop": "plop --plopfile ./src/plop/config.js"
   },
-  "browserslist": [
-    "last 2 versions"
-  ],
   "dependencies": {
     "@webcomponents/webcomponentsjs": "webcomponents/webcomponentsjs",
     "autoprefixer": "^6.7.5",
