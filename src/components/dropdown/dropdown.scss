@@ -1,0 +1,14 @@
+@import '../../sass/helpers';
+
+ui-dropdown {
+    > *:not(select) {
+        display: none;
+    }
+
+    select {
+        appearance: none;
+        border-radius: 0;
+        background-color: #FFF;
+        padding: $smallSpacing $mediumSpacing;
+    }
+}

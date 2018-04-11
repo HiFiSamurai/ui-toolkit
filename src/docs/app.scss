@@ -29,29 +29,40 @@ body {
 }
 
 .gallerySection {
-    border: 1px solid #6D3258;
+    border: 1px solid $controlColor;
     background-color: #FFF;
     box-shadow: 2px 2px 2px #CCC;
     max-width: 600px;
     margin: 15px auto;
 
+    summary {
+        background-color: $controlColor;
+        color: #FFF;
+        margin: 0;
+        padding: 10px;
+        outline: none;
+        user-select: none;
+    }
+
     &[open] summary ~ * {
         animation: appear $transitionNormal ease-in-out;
+    }
+
+    h4 {
+        margin-left: $mediumSpacing;
+    }
+
+    code {
+        white-space: pre;
+        padding: 0 $mediumSpacing;
+        display: block;
+        font-family: monospace;
     }
 }
 
 @keyframes appear {
     0% { opacity: 0; }
     100% { opacity: 1; }
-}
-
-.gallerySection summary {
-    background-color: #6D3258;
-    color: #FFF;
-    margin: 0;
-    padding: 10px;
-    outline: none;
-    user-select: none;
 }
 
 .sectionBox {

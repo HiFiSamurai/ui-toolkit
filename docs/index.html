@@ -10,6 +10,32 @@
     </head>
     <body>
         <div class="mainContent">
+            <!-- Variables -->
+            <details class="gallerySection" open>
+                <summary>Variables</summary>
+                <h4>Spacing</h4>
+                <code>
+$smallSpacing:  5px;
+$mediumSpacing: 15px;
+$largeSpacing:  30px;
+$xlargeSpacing: 60px;
+                </code>
+
+                <h4>Transition Speeds</h4>
+                <code>
+$transitionNormal: 300ms;
+$transitionSubtle: 100ms;
+$transitionLong:   600ms;
+                </code>
+
+                <h4>Z-Index</h4>
+                <code>
+$chromeZIndex: 1000;
+$menuZIndex:   2000;
+$dialogZIndex: 3000;
+                </code>
+            </details>
+
             <!-- Tab Controls -->
             <details class="gallerySection">
                 <summary>Flat Tabs</summary>
@@ -53,6 +79,16 @@
                 <summary>Toggle</summary>
                 <div class="sectionBox">
                     <ui-toggle/>
+                </div>
+            </details>
+
+            <!-- Dropdown -->
+            <details class="gallerySection">
+                <summary>Dropdown</summary>
+                <div class="sectionBox">
+                    <ui-dropdown>
+                        <option value="1">Stuff</option>
+                    </ui-dropdown>
                 </div>
             </details>
         </div>
