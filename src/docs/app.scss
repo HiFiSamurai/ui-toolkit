@@ -1,0 +1,72 @@
+@import '../sass/globals';
+@import '../sass/tabs';
+@import '../sass/push';
+@import '../sass/spinner';
+@import '../sass/animations';
+
+* {
+    font-family: arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin: 0;
+    background-color: #F9F9F9;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.mainContent {
+    height: 100%;
+    overflow: auto;
+    margin: 0 10px;
+}
+
+.gallerySection {
+    border: 1px solid #6D3258;
+    background-color: #FFF;
+    box-shadow: 2px 2px 2px #CCC;
+    max-width: 600px;
+    margin: 15px auto;
+
+    &[open] summary ~ * {
+        animation: appear $transitionNormal ease-in-out;
+    }
+}
+
+@keyframes appear {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.gallerySection summary {
+    background-color: #6D3258;
+    color: #FFF;
+    margin: 0;
+    padding: 10px;
+    outline: none;
+    user-select: none;
+}
+
+.sectionBox {
+    display: table;
+    margin: 40px auto;
+}
+
+.spinner + .spinner {
+    margin-left: 15px;
+}
+
+.push-group {
+    margin-left: 15px;
+}
+
+.toggle + .toggle {
+    margin-left: 10px;
+}
