@@ -1,6 +1,6 @@
 {
   "name": "@HiFiSamurai/ui-toolkit",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Library of reusable components, styles, and variables",
   "author": "Maynard Russell <maynard.russell@gmail.com> (https://github.com/HiFiSamurai)",
   "license": "ISC",
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "clean": "del ./dist",
-    "build": "npm run clean && npm run build-js && npm run build-sass && npm run build-css && npm run build-templates && npm run build-components",
+    "build": "npm run clean && npm run build-js && npm run build-sass && npm run build-templates && npm run build-components",
     "build-js": "copyfiles ./src/js/*.js ./dist/js/ -f",
     "build-sass": "copyfiles ./src/sass/*.scss ./dist/sass/ -f",
     "build-css": "node-sass ./src/sass --output=./dist/css --output-style=compressed && npm run autoprefixer",
@@ -40,7 +40,6 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "node-sass": "^3.7.0",
     "plop": "^1.8.0",
     "postcss-cli": "^3.2.0",
     "stylelint": "^8.3.1",
@@ -57,6 +56,7 @@
     "csv-parse": "^1.2.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "html-loader": "^0.4.3",
+    "node-sass": "^3.7.0",
     "postcss-loader": "^1.3.2",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",

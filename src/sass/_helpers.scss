@@ -21,13 +21,25 @@ $transitionSubtle: 100ms;
 $transitionLong: 600ms;
 
 // Media Breakpoints
-$screenTablet: 768px;
-$screenDesktop: 1024px;
-$screenDesktopLg: 1200px;
+$breakpoints: (
+    'phone': 576px,
+    'tablet':  768px,
+    'tablet-wide': 992px,
+    'desktop': 1200px,
+    'desktop-wide': 1600px,
+) !default;
 
-$mediaTablet: "only screen and (max-width : "+$screenTablet+")";
-$mediaDesktop: "only screen and (max-width : "+$screenDesktop+")";
-$mediaDesktopLg: "only screen and (max-width : "+$screenDesktopLg+")";
+@mixin media($breakpoint, $direction: 'min') {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (#{$direction}-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+    @else {    /* stylelint-disable-line at-rule-empty-line-before */
+        @warn "Invalid breakpoint `#{$breakpoint}` - `#{direction}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
 
 // Z-Index Levels
 $chromeZIndex: 1000;
