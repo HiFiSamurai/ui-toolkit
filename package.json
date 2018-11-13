@@ -22,9 +22,7 @@
     "install": "npm run build",
     "lint": "eslint src/js/",
     "stylelint": "stylelint src/sass",
-    "plop": "plop --plopfile ./src/plop/config.js",
-    "webpack": "webpack --progress --colors --optimize-minimize --config src/docs/webpack.config.js",
-    "watch": "webpack --watch --config src/docs/webpack.config.js"
+    "plop": "plop --plopfile ./src/plop/config.js"
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.1.3",
