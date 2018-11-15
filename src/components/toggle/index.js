@@ -4,7 +4,7 @@ import './toggle.scss';
 import html from './toggle.html';
 
 class Toggle extends View {
-    static get name() { return 'ui-toggle'; }
+    static get tag() { return 'ui-toggle'; }
     static get html() { return html; }
 };
 
